@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>RGB-Guess</title>
+  </head>
+
+  <body>
+    <!-- ============= ANCHOR RGB-GUESS GAME =============  -->
+
+    <section class="color-game">
+      <div class="color-game__intro">
+        <h1 class="color-game__intro__title">RGB Guess!</h1>
+        <p class="color-game__intro__rules">
+          Try to find the color that matches the RGB code on screen!
+        </p>
+        <p class="color-game__intro__rules">R = Red, G = Green, B = Blue</p>
+      </div>
+
+      <div id="stripe" class="color-game__stripe">
+        <button class="color-game__stripe__btn-mode">Easy</button>
+        <button class="color-game__stripe__btn-mode selected">Hard</button>
+      </div>
+
+      <div id="container" class="color-game__square-container">
+        <h2 class="color-game__square-container__title">
+          <span id="colorDisplay"></span>
+        </h2>
+        <div class="color-game__square-container__square"></div>
+        <div class="color-game__square-container__square"></div>
+        <div class="color-game__square-container__square"></div>
+        <div class="color-game__square-container__square"></div>
+        <div class="color-game__square-container__square"></div>
+        <div class="color-game__square-container__square"></div>
+      </div>
+      <div class="color-game__end-game">
+        <p id="message"></p>
+        <button id="reset" class="color-game__end-game__btn-reset">
+          Try Again
+        </button>
+      </div>
+    </section>
+
+    <!-- ============= SECTION SCRIPTS =============  -->
+    <script src="app.js"></script>
+  </body>
+</html>

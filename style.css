@@ -1,0 +1,195 @@
+body {
+  /* CSS variables */
+  --main-background-color: #1e272e;
+  --title-background-color: #485460;
+  --text-color: #fff;
+  --text-color-alt: #000;
+  --square-start-color: #00e4f7;
+
+  color: var(--text-color);
+}
+
+.color-game {
+  background-color: var(--main-background-color);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  min-height: 90vh;
+}
+
+.color-game__intro {
+  color: var(--text-color);
+  background-color: var(--title-background-color);
+  padding: 1rem 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.color-game__intro__title {
+  margin: 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.color-game__intro__rules {
+  line-height: 1.3rem;
+  font-size: 0.8rem;
+}
+
+.color-game__stripe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--text-color);
+  color: var(--text-color-alt);
+  height: 2rem;
+}
+
+.color-game__end-game__btn-reset,
+.color-game__stripe__btn-mode {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: inherit;
+  outline: none;
+  transition: all 0.6s;
+}
+
+.color-game__stripe__btn-mode {
+  width: 50%;
+}
+
+.color-game__stripe__btn-mode:hover {
+  color: var(--text-color-alt);
+  background-color: steelblue;
+  cursor: pointer;
+}
+
+.selected {
+  color: var(--text-color-alt);
+  background-color: steelblue;
+}
+
+.color-game__square-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  padding-top: 1rem;
+  margin: 0 auto;
+}
+
+.color-game__square-container__title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.color-game__square-container__square {
+  width: 7rem;
+  height: 7rem;
+  background-color: var(--square-start-color);
+  margin: 1.66%;
+  border-radius: 15%;
+  transition: background 0.6s;
+}
+
+.color-game__square-container__square:hover {
+  cursor: pointer;
+}
+
+.color-game__end-game {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 0 3rem 0;
+}
+
+.color-game__end-game__btn-reset {
+  color: white;
+}
+
+.color-game__end-game__btn-reset:hover {
+  color: red;
+  cursor: pointer;
+}
+
+#message {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/* =========== SECTION BREAK POINTS =========== */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .color-game__square-container {
+    width: 70%;
+  }
+
+  .color-game__square-container__square {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .color-game__square-container {
+    width: 55%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .color-game__square-container {
+    width: 45%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .color-game__square-container {
+    width: 35%;
+  }
+}
+
+/* Super Extra large devices (large desktops, tv 1500px and up) */
+@media (min-width: 1500px) {
+  .color-game {
+    margin-top: 1rem;
+  }
+
+  .color-game__intro__title {
+    font-size: 2rem;
+  }
+
+  .color-game__intro__rules {
+    font-size: 1rem;
+  }
+
+  .color-game__stripe {
+    height: 1.8rem;
+  }
+
+  .color-game__end-game__btn-reset,
+  .color-game__stripe__btn-mode {
+    font-size: 1rem;
+  }
+
+  .color-game__square-container {
+    width: 60%;
+  }
+
+  .color-game__square-container__square {
+    width: 7rem;
+    height: 7rem;
+  }
+}
